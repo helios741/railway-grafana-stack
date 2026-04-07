@@ -5,7 +5,11 @@ scrape_configs:
   - job_name: 'prometheus'
     static_configs:
       - targets: ['localhost:9090']
-
+  - job_name: 'novel-server'
+    scheme: https
+    static_configs:
+      - targets: ['novel-server.railway.internal:8080']
+    metrics_path: '/metrics'
   # - job_name: 'example_api'
   #   scheme: http
   #   static_configs:
