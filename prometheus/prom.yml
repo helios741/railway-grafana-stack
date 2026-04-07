@@ -8,7 +8,7 @@ scrape_configs:
   - job_name: 'novel-server'
     scheme: http
     static_configs:
-      - targets: ['novel-server-railway.internal:8080']
+      - targets: ['novel-server.railway.internal:8080']
     metrics_path: '/metrics'
   # - job_name: 'example_api'
   #   scheme: http
